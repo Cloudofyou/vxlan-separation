@@ -1,0 +1,50 @@
+# Created by Topology-Converter v4.6.9
+#    Template Revision: v4.6.9
+#    https://github.com/cumulusnetworks/topology_converter
+#    using topology data from: ./childrens-evpn-poc.dot
+
+
+
+
+[oob-switch]
+oob-mgmt-switch ansible_host=192.168.200.5
+
+
+
+
+
+
+
+[leaf]
+border02 ansible_host=192.168.200.22
+border01 ansible_host=192.168.200.21
+p2leaf02 ansible_host=192.168.200.4
+p2leaf01 ansible_host=192.168.200.3
+internet ansible_host=192.168.200.25
+p1leaf01 ansible_host=192.168.200.1
+p1leaf02 ansible_host=192.168.200.2
+
+
+
+[spine]
+p1spine02 ansible_host=192.168.200.14
+p1spine01 ansible_host=192.168.200.13
+p2spine02 ansible_host=192.168.200.16
+p2spine01 ansible_host=192.168.200.15
+sspine01 ansible_host=192.168.200.11
+sspine02 ansible_host=192.168.200.12
+
+
+
+
+
+[host]
+p1server01 ansible_host=192.168.200.31
+p1server02 ansible_host=192.168.200.32
+p2server01 ansible_host=192.168.200.33
+p2server02 ansible_host=192.168.200.34
+
+
+[all:vars]
+ansible_user=cumulus
+ansible_ssh_pass=CumulusLinux!
