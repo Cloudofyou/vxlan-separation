@@ -2,7 +2,7 @@
 # Created by Topology-Converter v4.6.9
 #    Template Revision: v4.6.9
 #    https://github.com/cumulusnetworks/topology_converter
-#    using topology data from: ./childrens-evpn-poc.dot
+#    using topology data from: ./vxlan-seperation.dot
 
 echo "################################################"
 echo "  Running Automatic Management Server Setup..."
@@ -15,8 +15,8 @@ echo " Detected vagrant user is: $username"
 #       KNOBS
 #######################
 
-REPOSITORY="https://github.com/CumulusNetworks/childrens-evpn-poc"
-REPONAME="childrens-evpn-poc"
+REPOSITORY="https://github.com/CumulusNetworks/vxlan-seperation"
+REPONAME="vxlan-seperation"
 
 #Install Automation Tools
 puppet=0
@@ -46,9 +46,9 @@ install_puppet(){
 install_ansible(){
     echo " ### Installing Ansible... ###"
     apt-get install -qy ansible sshpass libssh-dev python-dev libssl-dev libffi-dev
-    sudo pip install pip --upgrade
-    sudo pip install setuptools --upgrade
-    sudo pip install ansible==$ansible_version --upgrade
+    pip install pip --upgrade
+    /usr/local/bin/pip install setuptools --upgrade
+    /usr/local/bin/pip install ansible==$ansible_version --upgrade
 }
 
 ## MOTD
@@ -209,9 +209,6 @@ cat <<EOT >> /home/cumulus/.gitconfig
 [core]
     editor = vim
 EOT
-
-echo "sudo su - cumulus" >> /home/vagrant/.bash_profile
-echo "exit" >> /home/vagrant/.bash_profile
 
 echo "############################################"
 echo "      DONE!"
