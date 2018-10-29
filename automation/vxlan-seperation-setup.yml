@@ -162,3 +162,67 @@
         - net add bgp bestpath as-path multipath-relax
     - name: save configuration
       command: net commit
+
+- hosts: p1leaf01
+  become: yes
+  tasks:
+    - name: add loopback interface
+      command: net add loopback lo ip address 172.16.1.10/32
+    - name: add bgp configuration
+      command: "{{ item }}"
+      with_items:
+        - net add bgp autonomous-system 65001
+        - net add bgp network 172.16.1.10/32
+        - net add bgp neighbor swp10-11 interface remote-as external
+        - net add bgp router-id 172.16.1.10
+        - net add bgp bestpath as-path multipath-relax
+    - name: save configuration
+      command: net commit
+
+- hosts: p1leaf02
+  become: yes
+  tasks:
+    - name: add loopback interface
+      command: net add loopback lo ip address 172.16.1.11/32
+    - name: add bgp configuration
+      command: "{{ item }}"
+      with_items:
+        - net add bgp autonomous-system 65002
+        - net add bgp network 172.16.1.11/32
+        - net add bgp neighbor swp10-11 interface remote-as external
+        - net add bgp router-id 172.16.1.11
+        - net add bgp bestpath as-path multipath-relax
+    - name: save configuration
+      command: net commit
+
+- hosts: p2leaf01
+  become: yes
+  tasks:
+    - name: add loopback interface
+      command: net add loopback lo ip address 172.16.1.12/32
+    - name: add bgp configuration
+      command: "{{ item }}"
+      with_items:
+        - net add bgp autonomous-system 65003
+        - net add bgp network 172.16.1.12/32
+        - net add bgp neighbor swp10-11 interface remote-as external
+        - net add bgp router-id 172.16.1.12
+        - net add bgp bestpath as-path multipath-relax
+    - name: save configuration
+      command: net commit
+
+- hosts: p2leaf02
+  become: yes
+  tasks:
+    - name: add loopback interface
+      command: net add loopback lo ip address 172.16.1.13/32
+    - name: add bgp configuration
+      command: "{{ item }}"
+      with_items:
+        - net add bgp autonomous-system 65004
+        - net add bgp network 172.16.1.13/32
+        - net add bgp neighbor swp10-11 interface remote-as external
+        - net add bgp router-id 172.16.1.13
+        - net add bgp bestpath as-path multipath-relax
+    - name: save configuration
+      command: net commit
