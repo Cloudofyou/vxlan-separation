@@ -8,20 +8,23 @@
     - name: save configuration
       command: net commit
     - name: add bgp configuration
-      command: net add bgp router-id 172.16.1.1
-      command: net add bgp network 172.16.1.1/32
-      command: net add bgp neighbor swp1-2 interface remote-as 65400
+      command: "{{ item }}"
+      with_items:
+        - net add bgp router-id 172.16.1.1
+        - net add bgp network 172.16.1.1/32
+        - net add bgp neighbor swp1-2 interface remote-as 65400
+        - net add bgp bestpath as-path multipath-relax
     - name: add external vlan
-      command: net add vlan 55 ip address 172.16.100.1/24
-      command: net add vlan 55 vlan-id 55
+      command: "{{ item }}"
+      with_items:
+        - net add vlan 55 ip address 172.16.100.1/24
+        - net add vlan 55 vlan-id 55
     - name: add bridge
-      command: net add bridge bridge vids 55
-      command: net add bridge bridge pvid 1
+      command: "{{ item }}"
+      with_items:
+        - net add bridge bridge vids 55
+        - net add bridge bridge pvid 1
     - name: add external vlan to bgp
       command: net add bgp network 172.16.100.0/24
-    - name: save configuration
-      command: net commit
-    - name: add BGP as-path multipath-relax
-      command: net add bgp bestpath as-path multipath-relax
     - name: save configuration
       command: net commit
