@@ -5,6 +5,9 @@
       command: net add loopback lo ip address 172.16.1.1/32
     - name: add bgp configuration
       command: net add bgp autonomous-system 65500
+    - name: save configuration
+      command: net commit
+    - name: add bgp configuration
       command: net add bgp router-id 172.16.1.1
       command: net add bgp network 172.16.1.1/32
       command: net add bgp neighbor swp1-2 interface remote-as 65400
