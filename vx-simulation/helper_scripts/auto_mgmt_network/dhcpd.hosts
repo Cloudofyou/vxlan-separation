@@ -13,40 +13,58 @@ group {
   option default-url = "http://192.168.200.254/onie-installer";
 
 
-host oob-mgmt-switch {hardware ethernet 44:38:39:00:00:45; fixed-address 192.168.200.5; option host-name "oob-mgmt-switch"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host oob-mgmt-switch {hardware ethernet 44:38:39:00:00:81; fixed-address 192.168.200.23; option host-name "oob-mgmt-switch"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host p1spine02 {hardware ethernet 44:38:39:00:00:4a; fixed-address 192.168.200.14; option host-name "p1spine02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2cr1-ss03 {hardware ethernet 44:38:39:00:00:94; fixed-address 192.168.200.5; option host-name "dc2cr1-ss03"; } 
 
-host p1spine01 {hardware ethernet 44:38:39:00:00:4c; fixed-address 192.168.200.13; option host-name "p1spine01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2cr1-ss02 {hardware ethernet 44:38:39:00:00:96; fixed-address 192.168.200.4; option host-name "dc2cr1-ss02"; } 
 
-host p2spine02 {hardware ethernet 44:38:39:00:00:56; fixed-address 192.168.200.16; option host-name "p2spine02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2cr1-ss01 {hardware ethernet 44:38:39:00:00:98; fixed-address 192.168.200.3; option host-name "dc2cr1-ss01"; } 
 
-host p2spine01 {hardware ethernet 44:38:39:00:00:5a; fixed-address 192.168.200.15; option host-name "p2spine01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2cr1-ss04 {hardware ethernet 44:38:39:00:00:9a; fixed-address 192.168.200.6; option host-name "dc2cr1-ss04"; } 
 
-host sspine01 {hardware ethernet 44:38:39:00:00:60; fixed-address 192.168.200.11; option host-name "sspine01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2tapc1-sp02 {hardware ethernet 44:38:39:00:00:84; fixed-address 192.168.200.12; option host-name "dc2tapc1-sp02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host sspine02 {hardware ethernet 44:38:39:00:00:62; fixed-address 192.168.200.12; option host-name "sspine02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2tapc1-sp01 {hardware ethernet 44:38:39:00:00:86; fixed-address 192.168.200.11; option host-name "dc2tapc1-sp01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host border02 {hardware ethernet 44:38:39:00:00:48; fixed-address 192.168.200.22; option host-name "border02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2bast1-sp02 {hardware ethernet 44:38:39:00:00:88; fixed-address 192.168.200.8; option host-name "dc2bast1-sp02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host border01 {hardware ethernet 44:38:39:00:00:4e; fixed-address 192.168.200.21; option host-name "border01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2bast1-sp01 {hardware ethernet 44:38:39:00:00:8a; fixed-address 192.168.200.7; option host-name "dc2bast1-sp01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host p2leaf02 {hardware ethernet 44:38:39:00:00:50; fixed-address 192.168.200.4; option host-name "p2leaf02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2sddc1-sp02 {hardware ethernet 44:38:39:00:00:ac; fixed-address 192.168.200.10; option host-name "dc2sddc1-sp02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host p2leaf01 {hardware ethernet 44:38:39:00:00:54; fixed-address 192.168.200.3; option host-name "p2leaf01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2sddc1-sp01 {hardware ethernet 44:38:39:00:00:ae; fixed-address 192.168.200.9; option host-name "dc2sddc1-sp01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host internet {hardware ethernet 44:38:39:00:00:5c; fixed-address 192.168.200.25; option host-name "internet"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2sddc1-lf01 {hardware ethernet 44:38:39:00:00:8c; fixed-address 192.168.200.17; option host-name "dc2sddc1-lf01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host p1leaf01 {hardware ethernet 44:38:39:00:00:66; fixed-address 192.168.200.1; option host-name "p1leaf01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2sddc1-lf02 {hardware ethernet 44:38:39:00:00:8e; fixed-address 192.168.200.18; option host-name "dc2sddc1-lf02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host p1leaf02 {hardware ethernet 44:38:39:00:00:68; fixed-address 192.168.200.2; option host-name "p1leaf02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host dc2tapc1-lf01 {hardware ethernet 44:38:39:00:00:90; fixed-address 192.168.200.21; option host-name "dc2tapc1-lf01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host p1server01 {hardware ethernet 44:38:39:00:00:52; fixed-address 192.168.200.31; option host-name "p1server01"; } 
+host dc2tapc1-lf02 {hardware ethernet 44:38:39:00:00:92; fixed-address 192.168.200.22; option host-name "dc2tapc1-lf02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host p1server02 {hardware ethernet 44:38:39:00:00:58; fixed-address 192.168.200.32; option host-name "p1server02"; } 
+host dc2bast1-lf04 {hardware ethernet 44:38:39:00:00:9c; fixed-address 192.168.200.16; option host-name "dc2bast1-lf04"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host p2server01 {hardware ethernet 44:38:39:00:00:5e; fixed-address 192.168.200.33; option host-name "p2server01"; } 
+host dc2bast1-lf01 {hardware ethernet 44:38:39:00:00:9e; fixed-address 192.168.200.13; option host-name "dc2bast1-lf01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host p2server02 {hardware ethernet 44:38:39:00:00:64; fixed-address 192.168.200.34; option host-name "p2server02"; } 
+host dc2bast1-lf02 {hardware ethernet 44:38:39:00:00:a0; fixed-address 192.168.200.14; option host-name "dc2bast1-lf02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host dc2bast1-lf03 {hardware ethernet 44:38:39:00:00:a2; fixed-address 192.168.200.15; option host-name "dc2bast1-lf03"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host dc2sddc1-lf04 {hardware ethernet 44:38:39:00:00:a4; fixed-address 192.168.200.20; option host-name "dc2sddc1-lf04"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host dc2-campus02 {hardware ethernet 44:38:39:00:00:a6; fixed-address 192.168.200.2; option host-name "dc2-campus02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host dc2-campus01 {hardware ethernet 44:38:39:00:00:a8; fixed-address 192.168.200.1; option host-name "dc2-campus01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host dc2sddc1-lf03 {hardware ethernet 44:38:39:00:00:aa; fixed-address 192.168.200.19; option host-name "dc2sddc1-lf03"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host dc2bast1-svr04 {hardware ethernet 44:38:39:00:00:b0; fixed-address 192.168.200.34; option host-name "dc2bast1-svr04"; } 
+
+host dc2bast1-svr01 {hardware ethernet 44:38:39:00:00:b2; fixed-address 192.168.200.31; option host-name "dc2bast1-svr01"; } 
+
+host dc2bast1-svr02 {hardware ethernet 44:38:39:00:00:b4; fixed-address 192.168.200.32; option host-name "dc2bast1-svr02"; } 
+
+host dc2bast1-svr03 {hardware ethernet 44:38:39:00:00:b6; fixed-address 192.168.200.33; option host-name "dc2bast1-svr03"; } 
 }#End of static host group
 
