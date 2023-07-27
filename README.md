@@ -1,6 +1,6 @@
-# vxlan-seperation
+# vxlan-separation
 
 
 ### Network Diagram:
 
-![Network Diagram](https://github.com/Cloudofyou/vxlan-seperation/blob/master/documentation/vxlan-seperation-repo-diag3.png)
+![Network Diagram](https://github.com/Cloudofyou/vxlan-separation/blob/master/documentation/vxlan-seperation-repo-diag3.png)
